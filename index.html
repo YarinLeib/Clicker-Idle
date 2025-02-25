@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/style.css" />
+    <title>Click to survive</title>
+</head>
+
+<body>
+    <main>
+        <div id="game-intro">
+            <h1>Click to Survive</h1>
+            <input type="text" id="username-input" class="username" placeholder="What is your name">
+            <button id="start-button">Start Game</button>
+
+        </div>
+
+        <div id="game-container">
+            <div>
+                <!--monster/boss stats-->
+                <h2>Level: <span id="level">1</span></h2>
+                <p>Monster <span id="enemy"></span></p>
+                <p>HP <span id="healthMob">100</span></p>
+
+                <!--Attack log-->
+                <p id="attackLog"></p>
+                <!--shop-->
+                <p>Coins: <span id="coins">0</span></p>
+                <h3>Shop</h3>
+                <button type="button">Buy Power 50 Coins</button>
+                <button type="button">Buy Hp Potion 100 Coins</button>
+                <button type="button">Buy Mana Potion 100 Coins</button>
+
+                <!--Player stats-->
+                <h3><span id="username-display" class="username"></span></h3>
+                <button type="button">Super Click</button>
+                <p id="playerStrength" style="display: none;">10</p>
+                <p>HP <span id="healthPlayer">100</span></p>
+                <p>Mana <span id="manaPlayer">100</span></p>
+
+            </div>
+        </div>
+
+        <div id="game-end">
+            <h1>Game Over</h1>
+            <button id="restart-button">Restart</button>
+        </div>
+    </main>
+    <script type="text/javascript" src="/js/game.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+    <script type="text/javascript" src="js/player.js"></script>
+    <script type="text/javascript" src="js/monster.js"></script>
+</body>
+
+</html>
