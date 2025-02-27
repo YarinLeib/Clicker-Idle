@@ -10,7 +10,7 @@ class Game {
     this.player = new Player();
 
     //monster setup
-    this.baseMonetserHp = 100;
+    this.baseMonsterHp = 100;
     this.monsterHP = this.baseMonetserHp;
     this.monsterCount = 0;
     this.canAttak = true;
@@ -41,7 +41,7 @@ class Game {
   }
 
   spawnMonster() {
-    this.canAttak = false;
+    this.canAttack = false;
     this.monsterCount++;
 
     let extraHp = 0;
@@ -55,14 +55,14 @@ class Game {
       }
     }
     setTimeout(() => {
-      this.monster = new Monster(this.monsterHP + extraHp);
+      game.monster = new Monster(this.monsterHP + extraHp);
       this.canAttack = true;
     }, 500);
   }
 }
 
 function spawnMonster() {
-  if (game) {
+  if (typeof game !== "undefined" && game !== null) {
     game.spawnMonster();
   }
 }
