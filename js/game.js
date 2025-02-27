@@ -11,9 +11,9 @@ class Game {
 
     //monster setup
     this.baseMonsterHp = 100;
-    this.monsterHP = this.baseMonetserHp;
+    this.monsterHP = this.baseMonsterHp;
     this.monsterCount = 0;
-    this.canAttak = true;
+    this.canAttack = true;
     this.spawnMonster();
 
     //game control settings
@@ -41,7 +41,7 @@ class Game {
   }
 
   spawnMonster() {
-    this.canAttack = false;
+    this.canAttak = false;
     this.monsterCount++;
 
     let extraHp = 0;
@@ -51,18 +51,18 @@ class Game {
       if (this.monsterCount === 1) {
         this.monsterHP = 100;
       } else {
-        this.monsterHP = this.baseMonetserHp + this.monsterCount * 75;
+        this.monsterHP = this.baseMonsterHp + this.monsterCount * 75;
       }
     }
     setTimeout(() => {
-      game.monster = new Monster(this.monsterHP + extraHp);
+      this.monster = new Monster(this.monsterHP + extraHp);
       this.canAttack = true;
     }, 500);
   }
 }
 
 function spawnMonster() {
-  if (typeof game !== "undefined" && game !== null) {
+  if (game) {
     game.spawnMonster();
   }
 }
