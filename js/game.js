@@ -13,6 +13,7 @@ class Game {
     this.baseMonsterHp = 100;
     this.monsterHP = this.baseMonsterHp;
     this.monsterCount = 0;
+    this.maxMonster = 9;
     this.canAttack = true;
     this.spawnMonster();
 
@@ -27,7 +28,7 @@ class Game {
 
     const usernameDisplay = document.getElementById("username-display");
     if (usernameDisplay) {
-      usernameDisplay.textContent = this.username;
+      usernameDisplay.textContent = `${this.username} (Strength: ${this.player.strength})`;
     }
 
     this.startScreen.style.display = "none";
@@ -41,6 +42,10 @@ class Game {
   }
 
   spawnMonster() {
+    if (this.monsterCount >= this.maxMonster) {
+      this.endGame();
+      return;
+    }
     this.canAttak = false;
     this.monsterCount++;
 
@@ -57,7 +62,20 @@ class Game {
     setTimeout(() => {
       this.monster = new Monster(this.monsterHP + extraHp);
       this.canAttack = true;
+      this.updateMonsterCount();
     }, 500);
+  }
+
+  updateMonsterCount() {
+    const monsterCounter = document.getElementById("monsterCount");
+    if (monsterCounter) {
+      monsterCounter.textContent = `Monster ${this.monsterCount}/${this.maxMonster}`;
+    }
+  }
+
+  endGame() {
+    this.gameScreen.style.display = "none";
+    this.gameEndScreen.style.display = "block";
   }
 }
 
