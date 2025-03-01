@@ -33,6 +33,7 @@ class Game {
 
     this.startScreen.style.display = "none";
     this.gameScreen.style.display = "block";
+    document.getElementById("game-info").style.display = "block";
 
     this.gameScreen.addEventListener("click", (event) => {
       if (event.target.tagName !== "BUTTON" && this.canAttack) {
@@ -75,6 +76,7 @@ class Game {
 
   endGame() {
     this.gameScreen.style.display = "none";
+    document.getElementById("game-info").style.display = "none";
     this.gameEndScreen.style.display = "block";
   }
 }

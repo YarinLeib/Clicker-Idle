@@ -18,37 +18,40 @@
         </div>
 
         <div id="game-container">
-            <div>
-                <!--monster/boss stats-->
-                <h2 id="monsterCount">Monster 1/9</h2>
-                <p>HP <span id="healthMob">100</span></p>
-                <div id="monster-hp-bar">
-                    <div id="monster-hp-fill"></div>
-                </div>
+
+            <!--Player section-->
+            <div id="player-section">
                 <img id="player-img" src="" alt="Player">
-                <img id="monster-img" src="" alt="Monster">
-
-                <!--Attack log-->
-                <p id="attackLog"></p>
-                <!--shop-->
-                <p>Coins: <span id="coins">0</span></p>
-                <h3>Shop</h3>
-                <button id="buyPower" type="button">Buy Power (costs 50 Coins)</button>
-
-                <button id="buyMana" type="button">Buy 50 Mana points (costs 100 Coins)</button>
-
-                <!--Player stats-->
-                <h3><span id="username-display" class="username"></span></h3>
-
-                <button id="superClick" type="button">Super Click deals 4000 (60 Mana points)</button>
-                <p id="playerStrength" style="display: none;">10</p>
                 <p>Mana <span id="manaPlayer">100/100</span></p>
                 <div id="player-mana-bar">
                     <div id="player-mana-fill"></div>
                 </div>
-
+            </div>
+            <!--Monster section-->
+            <div id="monster-section">
+                <img id="monster-img" src="" alt="Monster">
+                <p>HP <span id="healthMob">100</span></p>
+                <div id="monster-hp-bar">
+                    <div id="monster-hp-fill"></div>
+                </div>
             </div>
         </div>
+        <!--Extra elements-->
+        <div id="game-info">
+            <h2 id="monsterCount">Monster 1/9</h2>
+            <p id="attackLog"></p>
+            <p>Coins: <span id="coins">0</span></p>
+            <h3>Shop</h3>
+            <button id="buyPower" type="button">Buy Power (costs 50 Coins)</button>
+            <button id="buyMana" type="button">Buy 50 Mana points (costs 100 Coins)</button>
+            <h3><span id="username-display" class="username"></span></h3>
+            <button id="superClick" type="button">Super Click deals 4000 (60 Mana points)</button>
+            <p id="playerStrength" style="display: none;">10</p>
+
+        </div>
+
+
+
 
         <div id="game-end">
             <h1>Game Over</h1>

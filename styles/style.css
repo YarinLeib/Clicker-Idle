@@ -1,39 +1,90 @@
+* {
+  user-select: none;
+}
 body {
   background-image: url("../images/Map.png");
   background-size: cover;
   background-position: center;
+
+  color: aliceblue;
+}
+#game-intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
 }
 
 #game-container {
   display: none;
+  justify-content: center;
+  align-items: center;
   width: 100vw;
   height: 100vh;
+  padding: 0 5vw;
+  position: relative;
 }
 
 #game-end {
   display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   width: 100vw;
   height: 100vh;
-}
-
-#game-intro {
+  top: 50%;
+  left: 50%;
+  color: white;
   text-align: center;
-  width: 100vw;
-  height: 100vh;
 }
 
-* {
-  user-select: none;
+#username-input {
+  margin-bottom: 20px;
+}
+
+#game-info {
+  display: none;
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  width: 40vw;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 15px;
+  border-radius: 10px;
+  color: white;
+}
+
+#player-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  left: 10%;
+  bottom: 20%;
 }
 
 #player-img {
-  width: 120px;
+  width: 150px;
+  height: auto;
+}
+
+#monster-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  right: 20%;
+  bottom: 20%;
 }
 
 #monster-info {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  height: auto;
+  position: relative;
 }
 
 #monster-hp-bar {
@@ -58,6 +109,9 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: absolute;
+  bottom: 10%;
+  left: 10%;
 }
 
 #player-mana-bar {

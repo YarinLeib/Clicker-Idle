@@ -19,6 +19,11 @@ window.onload = function () {
       startGame();
     });
   }
+  usernameInput.addEventListener("keypress", function (event) {
+    if (event.key === "Enter") {
+      startGame();
+    }
+  });
   function startGame() {
     game = new Game();
     console.log("Game instance created:", game);
