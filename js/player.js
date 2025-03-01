@@ -13,19 +13,19 @@ class Player {
     this.playerElement = document.getElementById("player-img");
 
     if (this.playerElement) {
-      this.playerElement.src = "./images/__TRAINEE_Attack_000.png";
+      this.playerElement.src = "./images/Attack1.png";
     }
 
     // List of attack images
     this.attackImages = [
-      "./images/__TRAINEE_Attack_000.png",
-      "./images/__TRAINEE_Attack_001.png",
-      "./images/__TRAINEE_Attack_002.png",
-      "./images/__TRAINEE_Attack_003.png",
-      "./images/__TRAINEE_Attack_004.png",
-      "./images/__TRAINEE_Attack_005.png",
-      "./images/__TRAINEE_Attack_006.png",
-      "./images/__TRAINEE_Attack_007.png",
+      "./images/Attack1.png",
+      "./images/Attack2.png",
+      "./images/Attack3.png",
+      "./images/Attack4.png",
+      "./images/Attack5.png",
+      "./images/Attack6.png",
+      "./images/Attack7.png",
+      "./images/Attack8.png",
     ];
 
     this.manaPlayerHTML = document.getElementById("manaPlayer");
