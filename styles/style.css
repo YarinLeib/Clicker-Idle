@@ -1,22 +1,25 @@
-/* body {
-  background-image: url(/images/Free-Vampires-Locations-Battle-Background-Pack2.jpg);
-} */
+body {
+  background-image: url("../images/Map.png");
+  background-size: cover;
+  background-position: center;
+}
+
 #game-container {
   display: none;
-  width: 97vw;
-  height: 96vh;
+  width: 100vw;
+  height: 100vh;
 }
 
 #game-end {
   display: none;
-  width: 97vw;
-  height: 96vh;
+  width: 100vw;
+  height: 100vh;
 }
 
 #game-intro {
   text-align: center;
-  width: 97vw;
-  height: 96vh;
+  width: 100vw;
+  height: 100vh;
 }
 
 * {

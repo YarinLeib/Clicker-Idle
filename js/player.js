@@ -17,16 +17,6 @@ class Player {
     }
 
     // List of attack images
-    this.attackImages = [
-      "./images/Attack1.png",
-      "./images/Attack2.png",
-      "./images/Attack3.png",
-      "./images/Attack4.png",
-      "./images/Attack5.png",
-      "./images/Attack6.png",
-      "./images/Attack7.png",
-      "./images/Attack8.png",
-    ];
 
     this.manaPlayerHTML = document.getElementById("manaPlayer");
     this.manaBarFill = document.getElementById("player-mana-fill");
@@ -65,7 +55,6 @@ class Player {
     monster.receiveDamage(this.strength);
 
     // Start attack animation
-    this.attackAnimation();
 
     if (this.attackLog) {
       this.attackLog.textContent = `${game.username} deals ${this.strength} damage.`;
@@ -81,21 +70,6 @@ class Player {
       document.getElementById("superClick").disabled = false;
       this.updateStrength();
     }
-  }
-
-  attackAnimation() {
-    let frame = 0;
-    const totalFrames = this.attackImages.length;
-
-    const interval = setInterval(() => {
-      if (frame < totalFrames) {
-        this.playerElement.src = this.attackImages[frame];
-        frame++;
-      } else {
-        clearInterval(interval);
-        this.playerElement.src = this.attackImages[0];
-      }
-    }, 10);
   }
 
   getCoins() {
