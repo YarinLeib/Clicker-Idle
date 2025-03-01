@@ -3,16 +3,74 @@
 } */
 #game-container {
   display: none;
+  width: 97vw;
+  height: 96vh;
 }
 
 #game-end {
   display: none;
+  width: 97vw;
+  height: 96vh;
 }
 
 #game-intro {
   text-align: center;
+  width: 97vw;
+  height: 96vh;
 }
 
 * {
   user-select: none;
+}
+
+#player-img {
+  width: 120px;
+}
+
+#monster-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#monster-hp-bar {
+  width: 200px;
+  height: 20px;
+  background-color: #333;
+  border: 2px solid #111;
+  border-radius: 5px;
+  overflow: hidden;
+  position: relative;
+  margin-top: 5px;
+}
+
+#monster-hp-fill {
+  width: 100%;
+  height: 100%;
+  background-color: red;
+  transition: width 0.3s ease-in-out;
+}
+
+#player-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#player-mana-bar {
+  width: 200px;
+  height: 20px;
+  background-color: #333;
+  border: 2px solid #111;
+  border-radius: 5px;
+  overflow: hidden;
+  position: relative;
+  margin-top: 5px;
+}
+
+#player-mana-fill {
+  width: 100%;
+  height: 100%;
+  background-color: #00bfff;
+  transition: width 0.3s ease-in-out;
 }
