@@ -14,16 +14,16 @@ class Monster {
     this.monsterElement = document.getElementById("monster-img");
 
     const monsterImages = [
-      "../images/Monster1.png",
-      "../images/Monster2.png",
-      "../images/Monster3.png",
-      "../images/Monster4.png",
-      "../images/Monster5.png",
-      "../images/Monster6.png",
-      "../images/Monster7.png",
-      "../images/Monster8.png",
-      "../images/Monster9.png",
-      "../images/Monster10.png",
+      "./images/Monster1.png",
+      "./images/Monster2.png",
+      "./images/Monster3.png",
+      "./images/Monster4.png",
+      "./images/Monster5.png",
+      "./images/Monster6.png",
+      "./images/Monster7.png",
+      "./images/Monster8.png",
+      "./images/Monster9.png",
+      "./images/Monster10.png",
     ];
 
     const randomIndex = Math.floor(Math.random() * monsterImages.length);
