@@ -22,6 +22,7 @@
             <!--Player section-->
             <div id="player-section">
                 <img id="player-img" src="" alt="Player">
+                <p>Lives <span id="lives">3</span></p>
                 <p>Mana <span id="manaPlayer">100/100</span></p>
                 <div id="player-mana-bar">
                     <div id="player-mana-fill"></div>
@@ -31,6 +32,12 @@
             <div id="monster-section">
                 <img id="monster-img" src="" alt="Monster">
                 <p>HP <span id="healthMob">100</span></p>
+                <p id="bossTimer">
+                    <span id="bossTimerFill"></span>
+                    <span id="bossTimerText">Boss Timer 30</span>
+                </p>
+
+
                 <div id="monster-hp-bar">
                     <div id="monster-hp-fill"></div>
                 </div>
@@ -45,7 +52,7 @@
             <button id="buyPower" type="button">Buy Power (costs 50 Coins)</button>
             <button id="buyMana" type="button">Buy 50 Mana points (costs 100 Coins)</button>
             <h3><span id="username-display" class="username"></span></h3>
-            <button id="superClick" type="button">Super Click deals 4000 (60 Mana points)</button>
+            <button id="superClick" type="button">Super Click add 400 strength for 1 click(60 Mana points)</button>
             <p id="playerStrength" style="display: none;">10</p>
 
         </div>

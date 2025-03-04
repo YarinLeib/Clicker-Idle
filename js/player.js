@@ -1,11 +1,12 @@
 class Player {
-  constructor(coins = 0, manaPlayer = 100, strength = 70) {
+  constructor(coins = 0, manaPlayer = 100, strength = 10, lives = 3) {
     console.log("Initializing Player...");
 
     this.coins = coins;
     this.manaPlayer = manaPlayer;
     this.maxMana = 100;
     this.strength = strength;
+    this.lives = lives;
     this.originalStrength = this.strength;
     this.resetAfterAttack = false;
 
@@ -148,7 +149,7 @@ class Player {
             this.originalStrength = this.strength;
           }
 
-          this.strength = this.originalStrength + 4000;
+          this.strength += 400;
 
           this.resetAfterAttack = true;
           console.log("SuperClick boosted strength to:", this.strength);

@@ -16,11 +16,20 @@ window.onload = function () {
       }
 
       console.log("Start button clicked. Initializing game...");
+
+      let sound = new Audio("./audio/Music.wav");
+      sound.volume = 0.7;
+      sound.play();
+
       startGame();
     });
   }
   usernameInput.addEventListener("keypress", function (event) {
     if (event.key === "Enter") {
+      let sound = new Audio("./audio/Music.wav");
+      sound.volume = 0.7;
+      sound.play();
+
       startGame();
     }
   });
@@ -29,9 +38,20 @@ window.onload = function () {
     console.log("Game instance created:", game);
     game.start();
     console.log("Game started successfully!");
+
+    let bgMusic = new Audio("./audio/Music.wav");
+    bgMusic.loop - true;
+    bgMusic.volume = 0.7;
+    bgMusic.play();
   }
   restartButton.addEventListener("click", function () {
     console.log("Restart button clicked. Reloading page...");
-    location.reload();
+    let restartSound = new Audio("./audio/Music.wav");
+    restartSound.volume = 0.7;
+    restartSound.play();
+
+    setTimeout(() => {
+      location.reload();
+    }, 500);
   });
 };
