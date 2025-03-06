@@ -1,5 +1,5 @@
 class Player {
-  constructor(coins = 0, manaPlayer = 100, strength = 10, lives = 3) {
+  constructor(coins = 0, manaPlayer = 100, strength = 50, lives = 3) {
     console.log("Initializing Player...");
 
     this.coins = coins;
@@ -74,7 +74,7 @@ class Player {
   }
 
   getCoins() {
-    this.coins += 100;
+    this.coins += 50;
     console.log("Coins increased to:", this.coins);
     if (this.coinsHTML) {
       this.coinsHTML.textContent = this.coins;

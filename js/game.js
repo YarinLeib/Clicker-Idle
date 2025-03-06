@@ -14,7 +14,7 @@ class Game {
     this.baseMonsterHp = 100;
     this.monsterHP = this.baseMonsterHp;
     this.monsterCount = 0;
-    this.maxMonster = 9;
+    this.maxMonster = 6;
     this.canAttack = true;
     this.spawnMonster();
 
@@ -96,14 +96,25 @@ class Game {
           if (this.monsterCount > 0) {
             this.monsterCount -= 2;
             this.player.lives--;
+
             this.lives.textContent = this.player.lives;
+
+            if (this.monsterCount % 3 === 1) {
+              this.monsterHP = Math.floor(this.monsterCount / 3) * 300 + 100;
+            } else {
+              this.monsterHP = this.baseMonsterHp + this.monsterCount * 75;
+            }
+
+            this.monster = new Monster(this.monsterHP);
+
+            document.getElementById("healthMob").textContent = this.monsterHP;
 
             if (this.player.lives <= 0) {
               this.endGame();
             }
 
             console.log(
-              `Boss kill falied! returning to monster ${this.monsterCount}`
+              `Boss kill failed! Returning to monster ${this.monsterCount}`
             );
             this.updateMonsterCount();
           }
@@ -139,6 +150,13 @@ class Game {
     this.gameScreen.style.display = "none";
     document.getElementById("game-info").style.display = "none";
     this.gameEndScreen.style.display = "block";
+    if (this.monsterCount >= this.maxMonster) {
+      document.getElementById("gameWin").style.display = "block";
+      document.getElementById("gameLose").style.display = "none";
+    } else {
+      document.getElementById("gameWin").style.display = "none";
+      document.getElementById("gameLose").style.display = "block";
+    }
   }
 }
 
